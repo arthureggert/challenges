@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "padded-blocks": [1, { "classes": "always" }],
+    "eol-last": [0],
+    "arrow-body-style": [0],
+    "max-len": [2, { "code": 120 }],
+    "import/extensions": [0],
+    "import/prefer-default-export": [0],
+    "react/prefer-stateless-function": [0],
+    "react/jsx-filename-extension": [0],
+    "react/no-array-index-key":[0],
+    "react/forbid-prop-types": [2, { "forbid": ["any"], "checkContextTypes": false, "checkChildContextTypes": false }]
+  }
+}
