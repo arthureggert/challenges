@@ -1,0 +1,124 @@
+    @import '~material-design-lite/src/material-design-lite.scss';
+    @import '~material-design-icons/iconfont/material-icons.css';
+    @import '~roboto-fontface/css/roboto/roboto-fontface.css';
+    body {
+        font-family: 'Roboto';
+        margin: 0;
+        padding: 0;
+        min-height: auto;
+        background-image: url('./images/backgroup-1.jpg');
+        background-size: cover;
+    }
+
+    .mdl-layout__header {
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: none;
+    }
+
+    .mdl-grid {
+        &--center-items {
+            justify-content: center;
+        }
+        &--no-margin {
+            margin: 0;
+        }
+    }
+
+    .mdl-card__supporting-text {
+        >h4 {
+            margin-top: 0;
+        }
+        &--center {
+            justify-content: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .mdl-card__title-text {
+        >small {
+            padding-right: 10px;
+        }
+        &--center {
+            justify-content: center;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .mdl__button--search {
+        margin-top: 2%;
+    }
+
+    .mdl-data-table {
+        thead>tr>th {
+            text-align: center;
+        }
+        tbody>tr>td {
+            text-align: center;
+        }
+    }
+
+    .mdl-paging {
+        color: rgba(0, 0, 0, 0.54);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        width: 100%
+    }
+
+    .mdl-textfield__expandable-holder--search {
+        width: 100%
+    }
+
+    th.sort {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        min-width: 75px; // th "Year" is too small and sort icon needs extra room
+        &:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:after {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            content: "";
+            position: relative;
+            top: -10px;
+            right: -5px;
+        }
+        &.asc:after {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #000;
+            content: "";
+            position: relative;
+            top: 4px;
+            right: -5px;
+        }
+        &.desc:after {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #000;
+            content: "";
+            position: relative;
+            top: -4px;
+            right: -5px;
+        }
+    }

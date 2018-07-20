@@ -1,0 +1,20 @@
+{
+    "maincard": {
+        "title": "LibraryManager - Your Online Librabry",
+        "text": " <h4>Welcome!</h4><p>Our library management service caters to both home and small organizational libraries. Our online software lets you create multiple libraries, catalog movies <b>(music, books and video games comming soon)</b>.</p>",
+        "icon": ""
+    },
+    "infocards": [{
+        "title": "Library Management",
+        "text": "<p>This SPA can be used as a online movie manger, find a movie that you like an then add it to your library. Whether you have 50 items or 100,000 items, your library is precious. With libib, managing your private library of movies is a snap.</p>",
+        "icon": "donut_large"
+    }, {
+        "title": "Automatic Information",
+        "icon": "find_in_page",
+        "text": "<p>Search and LibraryManager automatically retrieves that item's cover art andall pertinent information.</p>"
+    }, {
+        "title": "Keep your Inventory",
+        "icon": "store",
+        "text": "<p>Oh horrors! Someone has broken in your house and stolen all your Blu-rays and DVDs... well with a quick export of your library, you now have a complete list of every item you owned.</p>"
+    }]
+}
