@@ -1,0 +1,86 @@
+<md-content>
+  <header>
+    <navbar/>
+  </header>
+  <section class="jumbotron">
+    <h1>Será que dá praia?!</h1>
+    <p class="lead">
+      App para previsão do tempo com indicação de praia! ou não :(
+    </p>
+    Informe sua cidade e vamos nessa!
+    <search/>
+  </section>
+  <div ng-show="main.hasResult()">
+    <md-card flex>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Previsão para próximos dias</span>
+          <span class="md-subhead">{{main.getCidadeEstado()}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <div layout="row" layout-align="center">
+          <md-card flex ng-repeat="previsao in main.getPrevisaoProximosDias()">
+            <md-card-content>
+              <p>{{previsao.date}}</p>
+              <p>Min: {{previsao.low}}ºC</p>
+              <p>Max: {{previsao.high}}ºC</p>
+              <p>{{main.getDescricao(previsao.code)}}</p>
+            </md-card-content>
+          </md-card>
+        </div>
+      </md-card-content>
+    </md-card>
+
+    <div layout="row" layout-align="space-around stretch">
+      <md-card flex="33">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Maxima e Minima</span>
+            <span class="md-subhead">No periodo</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div layout="row" layout-align="center">
+            <md-card flex>
+              <md-card-content>
+                <p>Dia {{main.getMaximaPeriodo().date}} </p>
+                <p>Maxima: {{main.getMaximaPeriodo().high}}ºC</p>
+              </md-card-content>
+            </md-card>
+            <md-card flex>
+              <md-card-content>
+                <p>Dia {{main.getMinimaPeriodo().date}} </p>
+                <p>Minima: {{main.getMinimaPeriodo().low}}ºC</p>
+              </md-card-content>
+            </md-card>
+          </div>
+        </md-card-content>
+      </md-card>
+
+      <md-card flex="33">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Deu praia?</span>
+            <span class="md-subhead">No final de semana</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <h1>{{main.deuPraia()}}</h1>
+        </md-card-content>
+      </md-card>
+
+      <md-card flex="33">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Variação de temperatura</span>
+            <span class="md-subhead">No periodo</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div google-chart chart="main.getChart()" style="width:100%;"></div>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</md-content>
